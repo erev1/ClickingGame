@@ -77,6 +77,10 @@ class App extends Component {
 
     for (let i = shuffled.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
+        // Wanted to break down what's going on here. The following line is making use
+        // of array destructuring in ordert to swap the value of two elements in the
+        // shuffled array. So it's setting shuffled[i] equal to whatever the value of 
+        // shuffled[j] is and vice versa.
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     //
@@ -105,8 +109,8 @@ class App extends Component {
       this.shuffleImages()
 
     }
-    
-    console.log(clickedDupe)
+    // 😬
+    // console.log(clickedDupe)
   }
 
   render() {
